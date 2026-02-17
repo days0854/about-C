@@ -1,11 +1,12 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { XCircle } from 'lucide-react'
 
-export default function PaymentFailPage() {
+function PaymentFailContent() {
     const searchParams = useSearchParams()
     const router = useRouter()
 
@@ -45,5 +46,13 @@ export default function PaymentFailPage() {
                 </CardContent>
             </Card>
         </div>
+    )
+}
+
+export default function PaymentFailPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <PaymentFailContent />
+        </Suspense>
     )
 }

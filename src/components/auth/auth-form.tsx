@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { login, signup } from '@/app/(auth)/actions'
@@ -15,7 +15,7 @@ interface AuthFormProps {
     view: 'login' | 'signup'
 }
 
-export function AuthForm({ view }: AuthFormProps) {
+function AuthFormContent({ view }: AuthFormProps) {
     const [loading, setLoading] = useState(false)
     const searchParams = useSearchParams()
     const error = searchParams.get('error')
@@ -96,5 +96,13 @@ export function AuthForm({ view }: AuthFormProps) {
                 </CardFooter>
             </form>
         </Card>
+    )
+}
+
+export function AuthForm(props: AuthFormProps) {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <AuthFormContent {...props} />
+        </Suspense>
     )
 }
