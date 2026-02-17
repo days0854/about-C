@@ -1,56 +1,25 @@
-name: Deploy to Naver Cloud
+name: Deploy to Production
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build application
-        run: npm run build
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-          NEXT_PUBLIC_TOSS_CLIENT_KEY: ${{ secrets.NEXT_PUBLIC_TOSS_CLIENT_KEY }}
-
-      - name: Deploy to Server via SSH
-        uses: appleboy/ssh-action@v1.0.0
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT || 22 }}
+          password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /home/${{ secrets.SERVER_USER }}/cert-platform
+            cd /root/cert-platform
             git pull origin main
-            npm ci --production
+            npm install
             npm run build
-            pm2 reload ecosystem.config.js --env production
-            pm2 save
-
-      - name: Deployment Status
-        if: success()
-        run: echo "✅ Deployment successful!"
-
-      - name: Deployment Failed
-        if: failure()
-        run: |
-          echo "❌ Deployment failed!"
-          exit 1
+            pm2 restart about-c
+            echo "✅ Deployment completed successfully!"
