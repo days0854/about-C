@@ -1,95 +1,66 @@
 import Link from 'next/link'
-import { Award } from 'lucide-react'
+import { Award, Github, Youtube, Mail, MapPin, Phone } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 
 export default function Footer() {
     return (
-        <footer className="border-t border-gray-800 bg-black text-gray-400">
-            <div className="container px-4 py-12 mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <footer className="border-t border-white/10 bg-[#050505] text-gray-400 font-sans">
+            <div className="container px-4 py-16 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
-                    <div className="space-y-4">
+                    <div className="col-span-1 lg:col-span-2 space-y-6">
                         <Link href="/" className="flex items-center space-x-2">
-                            <Award className="h-6 w-6 text-white" />
-                            <span className="text-lg font-bold text-white">AboutAcademy</span>
+                            <Award className="h-8 w-8 text-blue-500" />
+                            <span className="text-2xl font-bold text-white tracking-tight">AboutAcademy</span>
                         </Link>
-                        <p className="text-sm text-gray-400">
-                            인공지능 시대, 대체 불가능한 보안 전문가를 양성합니다.
+                        <p className="text-gray-400 leading-relaxed max-w-md break-keep">
+                            인공지능 시대, AI가 대체할 수 없는<br />
+                            <span className="text-gray-300 font-medium">최상위 1% 보안 전문가</span>를 양성합니다.
                         </p>
+                        <div className="flex gap-4 pt-2">
+                            <Link href="https://youtube.com" className="bg-white/5 p-2 rounded-full hover:bg-white/10 hover:text-white transition-colors">
+                                <Youtube className="h-5 w-5" />
+                            </Link>
+                            <Link href="#" className="bg-white/5 p-2 rounded-full hover:bg-white/10 hover:text-white transition-colors">
+                                <Github className="h-5 w-5" />
+                            </Link>
+                        </div>
                     </div>
 
-                    {/* Product */}
-                    <div className="space-y-4">
-                        <h4 className="text-sm font-semibold">Product</h4>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>
-                                <Link href="/templates" className="hover:text-foreground transition-colors">
-                                    Templates
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/preview" className="hover:text-foreground transition-colors">
-                                    Create Certificate
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/pricing" className="hover:text-foreground transition-colors">
-                                    Pricing
-                                </Link>
-                            </li>
+                    {/* Service */}
+                    <div>
+                        <h4 className="font-bold text-white mb-6">프로그램</h4>
+                        <ul className="space-y-4 text-sm">
+                            <li><Link href="/templates" className="hover:text-blue-400 transition-colors">자격증 로드맵</Link></li>
+                            <li><Link href="/preview" className="hover:text-blue-400 transition-colors">실전 모의고사</Link></li>
+                            <li><Link href="#" className="hover:text-blue-400 transition-colors">1:1 커리어 코칭</Link></li>
                         </ul>
                     </div>
 
-                    {/* Company */}
-                    <div className="space-y-4">
-                        <h4 className="text-sm font-semibold">Company</h4>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>
-                                <Link href="/about" className="hover:text-foreground transition-colors">
-                                    About
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/blog" className="hover:text-foreground transition-colors">
-                                    Blog
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className="hover:text-foreground transition-colors">
-                                    Contact
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Legal */}
-                    <div className="space-y-4">
-                        <h4 className="text-sm font-semibold">Legal</h4>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>
-                                <Link href="/privacy" className="hover:text-foreground transition-colors">
-                                    Privacy Policy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/terms" className="hover:text-foreground transition-colors">
-                                    Terms of Service
-                                </Link>
-                            </li>
+                    {/* Support */}
+                    <div>
+                        <h4 className="font-bold text-white mb-6">고객센터</h4>
+                        <ul className="space-y-4 text-sm">
+                            <li><Link href="#" className="hover:text-blue-400 transition-colors">자주 묻는 질문</Link></li>
+                            <li><Link href="/contact" className="hover:text-blue-400 transition-colors">문의하기</Link></li>
+                            <li><Link href="/terms" className="hover:text-blue-400 transition-colors">이용약관</Link></li>
+                            <li><Link href="/privacy" className="hover:text-blue-400 transition-colors font-medium">개인정보처리방침</Link></li>
                         </ul>
                     </div>
                 </div>
 
-                <Separator className="my-8" />
+                <Separator className="bg-white/10 my-8" />
 
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-sm text-gray-500">
-                        &copy; {new Date().getFullYear()} AboutAcademy. All rights reserved.
-                    </p>
-                    <div className="flex items-center gap-4 text-sm text-gray-500">
-                        <Link href="https://youtube.com" className="hover:text-white transition-colors">
-                            YouTube
-                        </Link>
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-gray-500">
+                    <div className="space-y-2">
+                        <p>상호명: 어바웃 C (About C) | 대표: 홍길동</p>
+                        <p>사업자등록번호: 000-00-00000 | 통신판매업신고: 2024-서울-0000</p>
+                        <p>주소: 서울특별시 ...</p>
+                        <p className="mt-4 text-xs text-gray-600">Copyright © {new Date().getFullYear()} AboutAcademy. All rights reserved.</p>
+                    </div>
+                    <div className="flex gap-6 text-xs">
+                        <Link href="/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link>
+                        <Link href="/terms" className="hover:text-white transition-colors">이용약관</Link>
                     </div>
                 </div>
             </div>
