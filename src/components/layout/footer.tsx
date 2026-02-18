@@ -4,17 +4,17 @@ import { Separator } from '@/components/ui/separator'
 
 export default function Footer() {
     return (
-        <footer className="border-t bg-muted/40">
+        <footer className="border-t border-gray-800 bg-black text-gray-400">
             <div className="container px-4 py-12 mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Brand */}
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center space-x-2">
-                            <Award className="h-6 w-6 text-primary" />
-                            <span className="text-lg font-bold">CertPlatform</span>
+                            <Award className="h-6 w-6 text-white" />
+                            <span className="text-lg font-bold text-white">AboutAcademy</span>
                         </Link>
-                        <p className="text-sm text-muted-foreground">
-                            Professional certificate generation made simple and beautiful.
+                        <p className="text-sm text-gray-400">
+                            인공지능 시대, 대체 불가능한 보안 전문가를 양성합니다.
                         </p>
                     </div>
 
@@ -83,18 +83,12 @@ export default function Footer() {
                 <Separator className="my-8" />
 
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-sm text-muted-foreground">
-                        &copy; {new Date().getFullYear()} CertPlatform. All rights reserved.
+                    <p className="text-sm text-gray-500">
+                        &copy; {new Date().getFullYear()} AboutAcademy. All rights reserved.
                     </p>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <Link href="https://twitter.com" className="hover:text-foreground transition-colors">
-                            Twitter
-                        </Link>
-                        <Link href="https://github.com" className="hover:text-foreground transition-colors">
-                            GitHub
-                        </Link>
-                        <Link href="https://linkedin.com" className="hover:text-foreground transition-colors">
-                            LinkedIn
+                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                        <Link href="https://youtube.com" className="hover:text-white transition-colors">
+                            YouTube
                         </Link>
                     </div>
                 </div>

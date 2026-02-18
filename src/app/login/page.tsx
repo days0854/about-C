@@ -35,7 +35,7 @@ export default function LoginPage() {
                             <Award className="h-8 w-8 text-white" />
                         </div>
                     </div>
-                    <CardTitle className="text-2xl font-bold">About C 로그인</CardTitle>
+                    <CardTitle className="text-2xl font-bold">AboutAcademy 로그인</CardTitle>
                     <CardDescription className="text-gray-400">
                         소셜 계정으로 간편하게 시작하세요
                     </CardDescription>

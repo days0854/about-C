@@ -11,7 +11,7 @@ export function ClientHeader() {
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Award className="h-6 w-6 text-primary" />
           <span className="text-xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-            CertPlatform
+            AboutAcademy
           </span>
         </Link>
         <nav className="flex items-center space-x-6 text-sm font-medium">

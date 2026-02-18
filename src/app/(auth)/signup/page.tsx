@@ -10,11 +10,11 @@ export default function SignupPage() {
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
             <Award className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-              CertPlatform
+              AboutAcademy
             </span>
           </Link>
           <h1 className="text-3xl font-bold tracking-tight">회원가입</h1>
-          <p className="text-muted-foreground">지금 CertPlatform을 시작하세요</p>
+          <p className="text-muted-foreground">지금 AboutAcademy를 시작하세요</p>
         </div>
         <AuthForm view="signup" />
       </div>

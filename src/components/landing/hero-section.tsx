@@ -13,28 +13,39 @@ export function HeroSection() {
       </div>
 
       <div className="container relative z-10 px-4 mx-auto text-center">
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-5xl mx-auto space-y-8">
           <div className="flex justify-center">
-            <Badge variant="secondary" className="mb-4 bg-white/10 text-white hover:bg-white/20 border-0">
-              보안 자격증의 정점
+            <Badge variant="secondary" className="mb-4 bg-red-500/10 text-red-400 hover:bg-red-500/20 border-red-500/20 px-4 py-1.5 text-sm">
+              인공지능 시대의 생존 전략
             </Badge>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-            보안 자격증의 정점,<br />
-            <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              About C
-            </span>에서<br />
-            완벽하게 준비하세요.
+            인공지능 시대,<br />
+            남는 일자리는<br />
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              '보안관리자'
+            </span>뿐입니다.
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed word-keep-all">
-            About C는 보안 전문가를 위한 전문 플랫폼입니다. CISA, CISM, CISSP, CPPG, CIA 시나리오를 최신 Gemini AI가 실시간으로 생성하여 제공합니다.
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed word-keep-all">
+            AI가 코딩하고, AI가 해킹하는 시대. <br className="hidden md:block" />
+            결국 보안을 관리하고 책임지는 것은 인간의 몫입니다. <br />
+            <span className="text-white font-semibold">AboutAcademy</span>에서 대체 불가능한 보안 전문가로 거듭나세요.
           </p>
 
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <Button size="lg" className="text-lg px-8 h-14 bg-white text-black hover:bg-gray-200">
+              무료 레벨테스트 시작하기
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 h-14 border-gray-700 hover:bg-gray-800">
+              커리큘럼 확인하기
+            </Button>
+          </div>
+
           {/* Connection Lines (Visual Decor) */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-24 w-[120%] h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent blur-sm" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-24 w-[80%] h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-32 w-[120%] h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent blur-sm" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-32 w-[80%] h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
         </div>
       </div>
     </section>
