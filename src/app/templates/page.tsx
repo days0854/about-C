@@ -35,10 +35,10 @@ export default function TemplatesPage() {
         </div>
 
         <Tabs defaultValue="security" className="max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-3 bg-[#111]">
-            <TabsTrigger value="security" className="data-[state=active]:bg-blue-600">보안관리자</TabsTrigger>
-            <TabsTrigger value="privacy" className="data-[state=active]:bg-purple-600">개인정보관리자</TabsTrigger>
-            <TabsTrigger value="audit" className="data-[state=active]:bg-green-600">IT 감사자</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 bg-white border border-white/10">
+            <TabsTrigger value="security" className="text-gray-900 font-bold data-[state=active]:bg-black data-[state=active]:text-white hover:bg-gray-100 transition-colors">보안관리자</TabsTrigger>
+            <TabsTrigger value="privacy" className="text-gray-900 font-bold data-[state=active]:bg-black data-[state=active]:text-white hover:bg-gray-100 transition-colors">개인정보관리자</TabsTrigger>
+            <TabsTrigger value="audit" className="text-gray-900 font-bold data-[state=active]:bg-black data-[state=active]:text-white hover:bg-gray-100 transition-colors">IT 감사자</TabsTrigger>
           </TabsList>
 
           {/* Security Track */}
