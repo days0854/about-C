@@ -79,10 +79,10 @@ export default async function AdminDashboard() {
                     <CardTitle className="text-white">빠른 작업</CardTitle>
                 </CardHeader>
                 <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <a href="/admin/content" className="p-4 bg-blue-900/20 hover:bg-blue-900/30 rounded-lg border border-blue-900/50 transition-colors text-center">
+                    <Link href="/admin/exams" className="p-4 bg-blue-900/20 hover:bg-blue-900/30 rounded-lg border border-blue-900/50 transition-colors text-center">
                         <FileText className="w-6 h-6 text-blue-500 mx-auto mb-2" />
                         <p className="text-sm text-gray-300">문제 업로드</p>
-                    </a>
+                    </Link>
                     <a href="/admin/users" className="p-4 bg-green-900/20 hover:bg-green-900/30 rounded-lg border border-green-900/50 transition-colors text-center">
                         <Users className="w-6 h-6 text-green-500 mx-auto mb-2" />
                         <p className="text-sm text-gray-300">회원 관리</p>
