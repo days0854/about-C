@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Award, Github, Youtube, Mail, MapPin, Phone } from 'lucide-react'
+import { Award, Github, Youtube } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="col-span-1 lg:col-span-2 space-y-6">
-                        <Link href="/" className="flex items-center space-x-2">
+                        <Link href="/about" className="flex items-center space-x-2 w-fit hover:opacity-80 transition-opacity">
                             <Award className="h-8 w-8 text-blue-500" />
                             <span className="text-2xl font-bold text-white tracking-tight">AboutAcademy</span>
                         </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold text-white mb-6">고객센터</h4>
                         <ul className="space-y-4 text-sm">
-                            <li><Link href="#" className="hover:text-blue-400 transition-colors">자주 묻는 질문</Link></li>
+                            <li><Link href="/faq" className="hover:text-blue-400 transition-colors">자주 묻는 질문</Link></li>
                             <li><Link href="/contact" className="hover:text-blue-400 transition-colors">문의하기</Link></li>
                             <li><Link href="/terms" className="hover:text-blue-400 transition-colors">이용약관</Link></li>
                             <li><Link href="/privacy" className="hover:text-blue-400 transition-colors font-medium">개인정보처리방침</Link></li>
@@ -53,14 +53,10 @@ export default function Footer() {
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-gray-500">
                     <div className="space-y-2">
-                        <p>상호명: 어바웃 C (About C) | 대표: 홍길동</p>
+                        <p>상호명: 어바웃아카데미</p>
                         <p>사업자등록번호: 000-00-00000 | 통신판매업신고: 2024-서울-0000</p>
                         <p>주소: 서울특별시 ...</p>
                         <p className="mt-4 text-xs text-gray-600">Copyright © {new Date().getFullYear()} AboutAcademy. All rights reserved.</p>
-                    </div>
-                    <div className="flex gap-6 text-xs">
-                        <Link href="/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link>
-                        <Link href="/terms" className="hover:text-white transition-colors">이용약관</Link>
                     </div>
                 </div>
             </div>
