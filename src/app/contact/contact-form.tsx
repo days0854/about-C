@@ -40,17 +40,17 @@ export default function ContactForm() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
                         <Label htmlFor="name" className="text-gray-300">성명</Label>
-                        <Input id="name" required placeholder="홍길동" className="bg-white/5 border-white/10 text-white" />
+                        <Input id="name" required placeholder="홍길동" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                     </div>
 
                     <div className="space-y-2">
                         <Label htmlFor="contact" className="text-gray-300">연락처</Label>
-                        <Input id="contact" required placeholder="010-0000-0000" className="bg-white/5 border-white/10 text-white" />
+                        <Input id="contact" required placeholder="010-0000-0000" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                     </div>
 
                     <div className="space-y-2">
                         <Label htmlFor="content" className="text-gray-300">내용</Label>
-                        <Textarea id="content" required placeholder="문의하실 내용을 입력해주세요." className="min-h-[150px] bg-white/5 border-white/10 text-white" />
+                        <Textarea id="content" required placeholder="문의하실 내용을 입력해주세요." className="min-h-[150px] bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                     </div>
 
                     <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6" disabled={loading}>

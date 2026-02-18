@@ -37,7 +37,7 @@ export function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-lg px-8 h-14 bg-white text-black hover:bg-gray-200">
-              <Link href="/level-test">무료 레벨테스트 시작하기</Link>
+              <Link href="/level-test" className="text-black">무료 레벨테스트 시작하기</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="text-lg px-8 h-14 border-gray-700 hover:bg-gray-800">
               <Link href="/templates">커리큘럼 확인하기</Link>

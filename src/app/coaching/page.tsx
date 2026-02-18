@@ -17,7 +17,7 @@ export default function CoachingPage() {
 
                     <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
                         {[
-                            { icon: <User />, title: "전담 멘토 배정", desc: "희망 직무에 맞는 네이버/카카오/라인 출신 멘토" },
+                            { icon: <User />, title: "전담 멘토 배정", desc: "보안전문가와의 1:1 상담" },
                             { icon: <Video />, title: "심층 화상 코칭", desc: "월 4회, 회당 60분 심도 있는 커리어 상담" },
                             { icon: <MessageSquare />, title: "무제한 Q&A", desc: "슬랙을 통한 실시간 질의응답 지원" }
                         ].map((item, i) => (

@@ -77,9 +77,9 @@ export default function ExamsPage() {
                         <h2 className="text-3xl font-bold text-white mb-12">주요 모의고사 과정</h2>
                         <div className="space-y-4">
                             {[
-                                { title: "정보보안기사 실기 대비반", level: "Advanced", price: "₩49,000", badge: "Best" },
-                                { title: "AWS 보안 전문 리더 과정", level: "Expert", price: "₩89,000", badge: "New" },
-                                { title: "웹 모의해킹 실무 입문", level: "Beginner", price: "₩29,000", badge: "Popular" },
+                                { title: "CISA (정보시스템감사사)", level: "Advanced", price: "₩49,000", badge: "Best" },
+                                { title: "CISSP (정보시스템보안전문가)", level: "Expert", price: "₩89,000", badge: "New" },
+                                { title: "CPPG (개인정보관리사)", level: "Beginner", price: "₩29,000", badge: "Popular" },
                             ].map((course, idx) => (
                                 <div key={idx} className="flex items-center justify-between bg-[#111] p-6 rounded-xl border border-white/10 hover:bg-[#1a1a1a] transition-colors group">
                                     <div className="flex items-center gap-6">
