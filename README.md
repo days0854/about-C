@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# About Academy (About C) - Security Certification Platform
 
-## Getting Started
+About Academy is a comprehensive platform for security professionals, offering certification roadmaps, mock exams, and career coaching.
 
-First, run the development server:
+## ✨ Features
+
+- **Certification Roadmap**: Role-based tracks for Security Manager, Privacy Manager, and Auditor.
+- **Mock Exam System**: Realistic CBT environment with timer, OMR, and result analysis (CISA, CISSP, etc.).
+- **Level Test**: 10-question mini-test to check your current security knowledge.
+- **1:1 Coaching**: Career consultation with industry experts.
+- **Dashboard**: Track your progress and managed certificates.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Charts**: Recharts
+- **Deployment**: PM2, Nginx, GitHub Actions
+
+## 🚀 Getting Started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for automated deployment via GitHub Actions to a self-hosted runner or SSH-accessible server.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Production**: `175.106.96.86`
+- **CI/CD**: `.github/workflows/deploy.yml`
