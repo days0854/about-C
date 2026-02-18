@@ -32,8 +32,8 @@ export default function Footer() {
                         <h4 className="font-bold text-white mb-6">프로그램</h4>
                         <ul className="space-y-4 text-sm">
                             <li><Link href="/templates" className="hover:text-blue-400 transition-colors">자격증 로드맵</Link></li>
-                            <li><Link href="/preview" className="hover:text-blue-400 transition-colors">실전 모의고사</Link></li>
-                            <li><Link href="#" className="hover:text-blue-400 transition-colors">1:1 커리어 코칭</Link></li>
+                            <li><Link href="/exams" className="hover:text-blue-400 transition-colors">실전 모의고사</Link></li>
+                            <li><Link href="/coaching" className="hover:text-blue-400 transition-colors">1:1 커리어 코칭</Link></li>
                         </ul>
                     </div>
 
