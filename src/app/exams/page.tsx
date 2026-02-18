@@ -3,6 +3,7 @@ import Footer from '@/components/layout/footer'
 import { CheckCircle2, Trophy, Clock, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { PaymentButton } from '@/components/payment/payment-button'
 
 export default function ExamsPage() {
     return (
@@ -95,11 +96,23 @@ export default function ExamsPage() {
                                     </div>
                                     <div className="flex items-center gap-6">
                                         <span className="text-xl font-bold text-white">{course.price}</span>
-                                        <Button asChild variant="outline" className="border-white/20 hover:bg-blue-600 hover:text-white hover:border-transparent">
-                                            <Link href={idx === 0 ? "/exam/cisa-mock-1" : "#"}>
-                                                {idx === 0 ? "시험 응시하기" : "신청하기"}
-                                            </Link>
-                                        </Button>
+                                        {idx === 0 ? (
+                                            <Button asChild variant="outline" className="border-white/20 hover:bg-blue-600 hover:text-white hover:border-transparent">
+                                                <Link href="/exam/cisa-mock-1">
+                                                    시험 응시하기
+                                                </Link>
+                                            </Button>
+                                        ) : idx === 1 ? (
+                                            <PaymentButton
+                                                price={89000}
+                                                orderName={course.title}
+                                                className="bg-blue-600 hover:bg-blue-700 text-white border-transparent"
+                                            />
+                                        ) : (
+                                            <Button variant="outline" className="border-white/20 hover:bg-blue-600 hover:text-white hover:border-transparent">
+                                                신청하기
+                                            </Button>
+                                        )}
                                     </div>
                                 </div>
                             ))}
