@@ -106,3 +106,52 @@ export const CISA_EXAM: Exam = {
     ...generatePlaceholders(6, 45) // Generate remaining 45 questions to reach 50
   ]
 };
+
+// Dashboard Mock Data
+export interface DashboardStats {
+  totalCertificates: number;
+  issuedThisMonth: number;
+  activeTemplates: number;
+}
+
+export interface Certificate {
+  id: string;
+  courseTitle: string;
+  recipientName: string;
+  status: 'draft' | 'issued' | 'revoked';
+  completionDate: string;
+  certificateId: string;
+}
+
+export const mockStats: DashboardStats = {
+  totalCertificates: 24,
+  issuedThisMonth: 8,
+  activeTemplates: 3
+};
+
+export const mockCertificates: Certificate[] = [
+  {
+    id: '1',
+    courseTitle: 'CISA (Certified Information Systems Auditor)',
+    recipientName: '홍길동',
+    status: 'issued',
+    completionDate: '2025-02-15T09:00:00Z',
+    certificateId: 'CISA-2025-001'
+  },
+  {
+    id: '2',
+    courseTitle: 'CISSP (Certified Information Systems Security Professional)',
+    recipientName: '김철수',
+    status: 'draft',
+    completionDate: '2025-03-01T00:00:00Z',
+    certificateId: 'PENDING'
+  },
+  {
+    id: '3',
+    courseTitle: 'CPPG (Certified Privacy Protection General)',
+    recipientName: '이영희',
+    status: 'revoked',
+    completionDate: '2024-12-20T14:30:00Z',
+    certificateId: 'CPPG-2024-999'
+  }
+];
