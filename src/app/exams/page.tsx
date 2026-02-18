@@ -95,8 +95,10 @@ export default function ExamsPage() {
                                     </div>
                                     <div className="flex items-center gap-6">
                                         <span className="text-xl font-bold text-white">{course.price}</span>
-                                        <Button variant="outline" className="border-white/20 hover:bg-blue-600 hover:text-white hover:border-transparent">
-                                            신청하기
+                                        <Button asChild variant="outline" className="border-white/20 hover:bg-blue-600 hover:text-white hover:border-transparent">
+                                            <Link href={idx === 0 ? "/exam/cisa-mock-1" : "#"}>
+                                                {idx === 0 ? "시험 응시하기" : "신청하기"}
+                                            </Link>
                                         </Button>
                                     </div>
                                 </div>
