@@ -54,8 +54,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-gray-500">
                     <div className="space-y-2">
                         <p>상호명: 어바웃아카데미</p>
-                        <p>사업자등록번호: 000-00-00000 | 통신판매업신고: 2024-서울-0000</p>
-                        <p>주소: 서울특별시 ...</p>
+                        <p>연락처: 010-8745-8895</p>
                         <p className="mt-4 text-xs text-gray-600">Copyright © {new Date().getFullYear()} AboutAcademy. All rights reserved.</p>
                     </div>
                 </div>
